@@ -1,0 +1,22 @@
+{
+  "name": "PetGame101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "cli-color": "^2.0.4",
+    "prompt-sync": "^4.2.0",
+    "typescript": "^5.9.3",
+    "@types/cli-color": "^2.0.6"
+  },
+  "private": true,
+  "dependencies": {
+    "@types/cli-color": "^2.0.6",
+    "cli-color": "^2.0.4",
+    "prompt-sync": "^4.2.0"
+  }
+}
