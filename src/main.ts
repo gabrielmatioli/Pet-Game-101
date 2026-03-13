@@ -76,7 +76,10 @@ while(true){
 
                             switch(managePetChoice){
                                 case "1":
-                                    chosenPet.eat()
+                                    const success = chosenPet.eat(mainPlayer.petFood)
+                                    if(success){
+                                        mainPlayer.petFood -= 1
+                                    }
                                     break
                                 case "2":
                                     chosenPet.play()

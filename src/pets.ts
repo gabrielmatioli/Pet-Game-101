@@ -1,4 +1,5 @@
 export type Gender = "Male" | "Female"
+type Success = true | false
 import {changeColor} from "./functions.ts";
 
 export abstract class Pet {
@@ -47,9 +48,9 @@ export abstract class Pet {
 
     }
 
-    eat(): void {
+    eat(food: number): Success{
 
-        if(this.hunger < 100){
+        if(this.hunger < 100 && food >= 1){
 
             console.log("──────────────────")
             console.log(`${changeColor("green", false, `${this.name} has been fed!`)}`);
@@ -61,6 +62,14 @@ export abstract class Pet {
             this.XP += XPGained
 
             this.levelUp()
+            return true
+        }
+        else if(food < 1){
+
+            console.log("──────────────────")
+            console.log(`${changeColor("red", false, 'Not enough pet food!')}`);
+            console.log("──────────────────")
+            return false
 
         }
         else if(this.hunger === 100){
@@ -68,8 +77,10 @@ export abstract class Pet {
             console.log("──────────────────")
             console.log(`${changeColor("red", false, `${this.name} is full!`)}`);
             console.log("──────────────────")
+            return false
 
         }
+        return false
 
     }
 
