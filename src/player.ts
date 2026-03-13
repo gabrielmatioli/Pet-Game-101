@@ -12,7 +12,6 @@ export class Player {
         this.name = name
     }
 
-    // ensures only PET constructors (Dog, Cat, etc.) can pass
     buyPet(petClass: new (name: string, gender: Gender) => Pet, petName: string, price: number): void {
         const chosenGender = randomGender()
 
