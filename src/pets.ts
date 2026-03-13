@@ -1,5 +1,4 @@
-export type Gender = "Male" | "Female"
-type Success = true | false
+import {Gender, Success} from "./types.ts";
 import {changeColor} from "./functions.ts";
 
 export abstract class Pet {

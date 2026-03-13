@@ -1,12 +1,10 @@
-import {Cat, Dog, Fox, Pet, Gender} from "./pets.ts";
+import {Cat, Dog, Fox, Pet} from "./pets.ts";
 import {Player} from "./player.ts";
 import cliColor from "cli-color"
 const clc = cliColor
 import promptSync from "prompt-sync";
 const prompt = promptSync()
-
-type availableSections = "pc" | "main" | "ps" | "mp" | "mpp" | "p"
-type Color = "red" | "green" | "yellow" | "blue" | "white";
+import {Gender, Color, AvailableSections} from "./types.ts";
 
 const petStoreFoodPrice: number = 50
 const petStore = [
@@ -32,7 +30,7 @@ function white(text: string): string {
     return changeColor("white", true, text)
 }
 
-export function display(option: availableSections, player?: Player, pet?: Pet): void {
+export function display(option: AvailableSections, player?: Player, pet?: Pet): void {
     switch (option) {
         case "pc":
 
